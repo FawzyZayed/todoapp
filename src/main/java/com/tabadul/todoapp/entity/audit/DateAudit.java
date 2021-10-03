@@ -1,4 +1,4 @@
-package com.tabadul.todoapp.entity;
+package com.tabadul.todoapp.entity.audit;
 
 import java.io.Serializable;
 import java.time.Instant;

@@ -1,8 +1,10 @@
 package com.tabadul.todoapp.entity;
 
+import lombok.Data;
 import org.hibernate.annotations.NaturalId;
 import javax.persistence.*;
 
+@Data
 @Entity
 @Table(name = "roles")
 public class Role {

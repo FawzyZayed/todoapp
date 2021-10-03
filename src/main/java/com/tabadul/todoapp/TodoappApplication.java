@@ -9,10 +9,6 @@ import javax.annotation.PostConstruct;
 import java.util.TimeZone;
 
 @SpringBootApplication
-@EntityScan(basePackageClasses = {
-		TodoappApplication.class,
-		Jsr310JpaConverters.class
-})
 public class TodoappApplication {
 	@PostConstruct
 	void init() {
