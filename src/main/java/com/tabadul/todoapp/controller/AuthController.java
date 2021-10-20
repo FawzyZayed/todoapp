@@ -5,7 +5,7 @@ import com.tabadul.todoapp.dto.auth.JwtAuthenticationResponse;
 import com.tabadul.todoapp.dto.auth.LoginRequest;
 import com.tabadul.todoapp.dto.auth.SignUpRequest;
 import com.tabadul.todoapp.entity.Role;
-import com.tabadul.todoapp.entity.RoleName;
+import com.tabadul.todoapp.entity.enums.RoleName;
 import com.tabadul.todoapp.entity.User;
 import com.tabadul.todoapp.exception.AppException;
 import com.tabadul.todoapp.repository.RoleRepository;

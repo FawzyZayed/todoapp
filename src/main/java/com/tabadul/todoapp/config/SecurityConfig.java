@@ -3,6 +3,7 @@ package com.tabadul.todoapp.config;
 import com.tabadul.todoapp.security.CustomUserDetailsService;
 import com.tabadul.todoapp.security.JwtAuthenticationEntryPoint;
 import com.tabadul.todoapp.security.JwtAuthenticationFilter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,9 +27,14 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
         jsr250Enabled = true,
         prePostEnabled = true
 )
+//@RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
     @Autowired
     CustomUserDetailsService customUserDetailsService;
+
+//    private final CustomUserDetailsService customUserDetailsService;
+
 
     @Autowired
     private JwtAuthenticationEntryPoint unauthorizedHandler;

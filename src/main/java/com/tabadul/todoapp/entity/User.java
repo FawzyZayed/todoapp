@@ -2,6 +2,7 @@ package com.tabadul.todoapp.entity;
 
 
 import com.tabadul.todoapp.entity.audit.DateAudit;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.NaturalId;
@@ -14,6 +15,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Data
+@AllArgsConstructor
 @Entity
 @NoArgsConstructor
 @Table(name = "users", uniqueConstraints = {
@@ -49,10 +51,20 @@ public class User extends DateAudit {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
 
+
+
+
     public User(String name, String username, String email, String password) {
         this.name = name;
         this.username = username;
         this.email = email;
         this.password = password;
+    }
+
+    public User(Long id, String name, String username, String email) {
+        this.id = id;
+        this.name = name;
+        this.username = username;
+        this.email = email;
     }
 }

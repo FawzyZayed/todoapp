@@ -1,5 +1,6 @@
 package com.tabadul.todoapp.entity;
 
+import com.tabadul.todoapp.entity.enums.RoleName;
 import lombok.Data;
 import org.hibernate.annotations.NaturalId;
 import javax.persistence.*;
